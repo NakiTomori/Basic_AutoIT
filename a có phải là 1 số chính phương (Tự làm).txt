@@ -1,0 +1,8 @@
+Global $a = 16
+$b = Sqrt($a)
+
+If $b = ($a / $b) Then
+	MsgBox(0, 'KQ', $a & ' là số chính phương')
+Else
+	MsgBox(0, 'KQ', $a & ' không phải số chính phương')
+EndIf

@@ -1,0 +1,34 @@
+Func CachDoc($Number)
+	Local $cachdoc[10] = ['Không', 'Một', 'Hai', 'Ba', 'Bốn', 'Năm', 'Sáu', 'Bảy', 'Tám', 'Chín']
+	Return $cachdoc[$Number]
+EndFunc
+; 10 (1) - 1x (2) - x0 (3) - xy (4)
+							$Number = 99
+Global $string
+Global $a = Int($Number / 10)
+Global $b = Mod($Number, 10)
+	;cách đọc của 1 và 2
+	If $Number > 99 or $Number < 10 Then
+		MsgBox(0, 'KQ', 'Số đã cho không phải là số có 2 chữ số')
+	Else
+		If $a == 1 Then
+			$string = 'Mười '
+			If $b == 0 Then
+				MsgBox(0, 'KQ', $string)
+			ElseIf $b == 5 Then
+				MsgBox(0, 'KQ', $string & ' Lăm')
+			Else
+				MsgBox(0, 'KQ', $string & CachDoc($b))
+			EndIf
+		;cách đọc của 3 và 4
+		Else
+			$string = CachDoc($a)
+			If $b == 5 Then
+				MsgBox(0, 'KQ', $string & ' Mươi' & ' Lăm')
+			Elseif $b == 1 Then
+				MsgBox(0, 'KQ', $string & ' Mươi' & ' Mốt')
+			Else
+			MsgBox(0, 'KQ', $string & ' Mươi ' & CachDoc($b))
+			EndIf
+		EndIf
+	EndIf

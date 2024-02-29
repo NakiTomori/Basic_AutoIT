@@ -1,0 +1,13 @@
+Global $Tong = 0 , $n = 6
+
+For $i = 1 to $n/2 step 1
+	If Mod($n,$i) == 0 then
+		$Tong += $i
+	EndIf
+Next
+
+If $Tong == $n Then
+	MsgBox(0, 'KQ', $n & ' là số hoàn hảo')
+Else
+	MsgBox(0, 'KQ', $n & ' không phải số hoàn hảo')
+EndIf

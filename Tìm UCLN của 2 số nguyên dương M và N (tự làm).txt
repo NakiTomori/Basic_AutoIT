@@ -1,0 +1,10 @@
+Global $N = 225 , $M =1250
+
+Do
+	If $N > $M Then
+		$N = $N - $M
+	Else
+		$M = $M - $N
+	EndIf
+Until $N == $M
+MsgBox (0, 'KQ', 'Ước chung lớn nhất là: ' & $N)

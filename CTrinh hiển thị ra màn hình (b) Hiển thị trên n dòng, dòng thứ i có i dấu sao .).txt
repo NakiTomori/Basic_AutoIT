@@ -1,0 +1,15 @@
+Global $n = 5
+
+Func Sosao()
+	Local $m = ''
+	For $i = 1 to $n
+		$m &= '* '
+		ConsoleWrite($m & @CRLF)
+Next
+EndFunc
+
+If $n < 0 or $n > 10 Then        ; 0 < n <= 10 cho nó nhẹ
+	MsgBox(0, 'KQ', 'Lỗi')
+Else
+	Sosao()
+EndIf

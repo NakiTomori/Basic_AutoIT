@@ -1,0 +1,24 @@
+Global $n = 8 ; nhập số cần phân tích
+
+Global $i = 2, $phantich
+
+If $n == 1 Then ; nếu $n = 1 thì output kết quả luôn
+	$n = $phantich
+	ConsoleWrite($n & ' = ' & $phantich)
+Else
+	Local $m = $n ; gán giá trị của n vào biến m cho việc thực hiện các phép tính kế tiếp
+	ConsoleWrite($n & ' = ')
+	Do
+		If Mod ($m, $i) == 0 Then
+			$m = $m / $i
+			ConsoleWrite($i & '*')
+		Else
+			If $i == 2 Then
+				$i = 3
+			Else
+				$i = $i + 2
+			EndIf
+		EndIf
+	Until $m = 1 ; lặp đến khi m bằng 1 để kết thúc chương trình (giống vs câu điều kiện If ở trên)
+	ConsoleWrite(@CRLF)
+EndIf

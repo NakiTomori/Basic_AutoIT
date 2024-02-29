@@ -1,0 +1,24 @@
+Func Ham($n)
+	If $n < 2 Then
+		Return $n
+		MsgBox(0,'KQ', $n & ' không phải số nguyên tố')
+	EndIf
+	If $n >= 2 Then
+		Local $c = $n - 1 , $i = 3
+		Do
+			If Mod($n, $i) == 0 Then ;nếu n chia hết cho i thì ko phải số nguyên tố
+				Return $n
+				MsgBox(0,'KQ', $n & ' không phải số nguyên tố')
+			EndIf
+			If Mod($n, $i) <> 0 Then ;nếu n chia cho i khác 0 thì
+				$i = $i + 2 ; tăng cho i thêm 2 đơn vị để i là số lẻ
+			EndIf
+		Until $i == $c or $i = $c - 1
+		If ($i == $c or $i = $c - 1) And Mod($n, $i) <> 0 Then
+			Return $n
+			MsgBox(0,'KQ', $n & ' là số nguyên tố')
+		EndIf
+	EndIf
+EndFunc
+
+Ham(7)

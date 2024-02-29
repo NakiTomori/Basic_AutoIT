@@ -1,0 +1,13 @@
+Func bangcuuchuong($Max)
+	ConsoleWrite('========BẢNG CỬU CHƯƠNG==========' & @CRLF)
+	For $i = 1 to $Max
+		For $n = 1 to 10
+			$Tong = $n * $i
+			ConsoleWrite( $i &' x ' & $n & ' = ' & $Tong & @CRLF)
+		Next
+		ConsoleWrite(@CRLF)
+	Next
+	ConsoleWrite('=================================' & @CRLF)
+EndFunc
+
+bangcuuchuong(5)

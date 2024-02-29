@@ -1,0 +1,19 @@
+$a = 1
+$b = -3
+$c = 2
+; ax^2 + bx + c = 0
+Func ham()
+	Local $d = $b^2 - 4 * $a * $c ; Delta
+	if $d > 0 Then
+		$x1 = (-$b + Sqrt($d)) / (2 * $a)
+		$x2 = (-$b - Sqrt($d)) / (2 * $a)
+		MsgBox(0, 'Nghiệm của phương trình', '$x1 = ' & $x1 & @CRLF & '$x2 = ' & $x2)
+	ElseIf $d = 0 Then
+		$x1 = -$b / (2 * $a)
+		MsgBox(0, 'Nghiệm của phương trình', '$x1 = $x2 = ' & $x1)
+	Else
+		MsgBox(0, 'Nghiệm của phương trình', 'Phương trình vô nghiệm')
+	EndIf
+EndFunc
+
+ham()

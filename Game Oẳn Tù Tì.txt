@@ -1,0 +1,33 @@
+Global $a = Random(1, 3, 1) , $b = 3 ; di?n s? tuong ?ng voi d?m là kéo vào $b (quy u?c ? du?i)
+; 1 là d?m
+; 2 là lá
+; 3 là kéo
+If $b < 0 or $b > 3 Then
+	MsgBox(0, 'KQ', 'ERROR')
+Else
+	If $a == 1 Then ; máy là d?m
+		If $b == 1 Then ; d?m
+			MsgBox(0, 'KQ', 'máy ra d?m và hòa')
+		ElseIf $b == 2 Then ; lá
+			MsgBox(0, 'KQ', 'máy ra d?m và ngu?i choi th?ng')
+		Else ; kéo
+			MsgBox(0, 'KQ', 'máy ra d?m và máy th?ng và b?n ngu')
+		EndIf
+	ElseIf $a == 2 Then ; máy là lá
+		If $b == 1 Then ; d?m
+			MsgBox(0, 'KQ', 'máy ra lá và máy th?ng và b?n ngu')
+		ElseIf $b == 2 Then ;lá
+			MsgBox(0, 'KQ', 'máy ra lá và Hòa')
+		Else
+			MsgBox(0, 'KQ', 'máy ra lá và ngu?i choi th?ng')
+		EndIf
+	Else ; máy là kéo
+		If $b == 1 Then ; d?m
+			MsgBox(0, 'KQ', 'máy ra kéo và ngu?i choi th?ng')
+		ElseIf $b == 2 Then ; lá
+			MsgBox(0, 'KQ', 'máy ra kéo và máy th?ng và b?n ngu')
+		Else ; kéo
+			MsgBox(0, 'KQ', 'máy ra kéo và hòa')
+		EndIf
+	EndIf
+EndIf

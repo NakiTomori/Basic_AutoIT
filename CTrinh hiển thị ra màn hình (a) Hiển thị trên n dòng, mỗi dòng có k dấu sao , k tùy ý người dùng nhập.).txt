@@ -1,0 +1,16 @@
+Global $k = 10 , $n = 5
+
+Func Sosao()
+	For $i = 1 to $k
+		ConsoleWrite('* ')
+	Next
+EndFunc
+
+For $l = 1 to $n
+	If $n < 0 or $n > 10 Then
+		MsgBox(0, 'KQ', 'Lỗi')
+	Else
+		Sosao()
+		ConsoleWrite(@CRLF)
+	EndIf
+Next
